@@ -1,0 +1,64 @@
+.coming-soon{
+    min-height:100vh;
+    background: #0D0D0D;
+    display:flex;
+    align-items:center;
+    padding:0 48px;
+}
+
+.cs-content{
+    max-width:600px;
+    margin-top:80px;
+}
+
+.cs-label{
+    font-size:11px;
+    letter-spacing:4px;
+    color:#C4973B;
+    text-transform: uppercase;
+    margin-bottom: 24px; 
+}
+.cs-heading{
+    font-family:'playfair Display',serif;
+    font-size: 72px;
+    font-weight:700;
+    line-height:1.1;
+    color:#F7F3EE;
+    margin-bottom:24px;
+}
+.gold{
+    color:#C4973B;
+}
+.cs-desc{
+    font-size:16px;
+    color:#8C7B6E;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+.cs-notify{
+    display:flex;
+    gap:0;
+}
+.cs-input{
+    background:#1A1A1A;
+    border:1px solid #333;
+    border-right: none;
+    padding: 14px 20px;
+    font-size:14px;
+    color:#F7F3EE;
+    width:300px;
+    outline:none;
+}
+.cs-input::placeholder{
+    color:#555;
+}
+.cs-btn{
+    background:#C4973B;
+    color: #f7f3ee;
+    border:none;
+    padding:14px 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    text-transform:uppercase;
+}

@@ -1,12 +1,17 @@
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import ComingSoon from"./components/ComingSoon"
 
 function App(){
   return(
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <Hero/>
-    </div>
+      <Routes>
+      <Route path="/" element={<Hero/>}/>
+      <Route path="/try-on" element={<ComingSoon/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

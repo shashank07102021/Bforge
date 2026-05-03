@@ -1,15 +1,16 @@
 import './Navbar.css'
+import {Link} from 'react-router-dom'
 
 function Navbar(){
     return(
         <nav>
             <div className="logo">B Forge</div>
             <ul className="nav-links">
-                <li>Collection</li>
-                <li>Style It</li>
-                <li>Mood Finder </li>
-                <li>Try-On</li>
-                <li>Story</li>
+                <li><Link to="/">Collection</Link></li>
+                <li><Link to="/">Style It</Link></li>
+                <li><Link to="/">Mood Finder</Link></li>
+                <li><Link to="/try-on">Try-On</Link></li>
+                <li><Link to="/">Story</Link></li>
             </ul>
             <div className="nav-actions">
                 <button className="login-btn">Login</button>
