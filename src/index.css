@@ -1,10 +1,98 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --ivory:#F7F3EE;
+  --ink:#0D0D0D;
+  --gold:#C4973B;
+  --gold-soft:#D9B45C;
+  --sand:#E8DDD0;
+  --sand-deep:#D9C9B4;
+  --line:rgba(13,13,13,0.12);
+  --muted:rgba(13,13,13,0.55);
+  --f-display:"Playfair Display",Georgia,serif;
+  --f-accent:"Cormorant Garamond",serif;
+  --f-body:"DM Sans",Arial,sans-serif;
 }
 
+*{box-sizing: border-box;}
+html,body{margin:0;padding:0;}
 body{
-  background:#f7f3EE;
-  font-family: 'DM Sans',sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  font-family: var(--f-body);
+  -webkit-font-smoothing:antialiased;
+  overflow-x: hidden;
+}
+
+a{color:inherit;text-decoration:none;}
+button{font-family: inherit; cursor:pointer;}
+::selection{background:var(--gold);color:var(--ivory)}
+.eyebrow{
+  font-family: var(--f-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color:var(--ink);
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+}
+.eyebrow::before{
+  content:"";
+  width:28px;
+  height:1px;
+  background: var(--gold);
+}
+.section-title{
+  font-family: var(--f-display);
+  font-weight:500;
+  font-size: clamp(40px,6vw,84px);
+  line-height:0.98;
+  letter-spacing:-0.01em;
+  margin:18px 0 0 ;
+}
+.section-title em {
+  font-family :var(--f-accent);
+  font-style: italic;
+  font-weight: 400;
+  color:var(--gold)
+}
+.btn{
+  display:inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding:16px 28px;
+  border:1px solid  var(--ink);
+  background:var(--ink);
+  color:var(--ivory);
+  font-family: var(--f-body);
+  font-size:12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  transition:all .35s ease;
+  text-decoration: none;
+  cursor:pointer;
+}
+.btn:hover{
+  background: var(--gold);
+  border-color:var(--gold);
+  color:var(--ink)
+}
+.btn--ghost{
+  background:transparent;
+  color:var(--ink);
+}
+.btn--ghost:hover{
+  background: var(--ink);
+  color:var(--ivory);
+}
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition: opacity 1s ,transform 1s ease;
+}
+.reveal.in{
+  opacity:1;
+  transform: translateY(0);
 }

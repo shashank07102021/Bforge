@@ -2,7 +2,8 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import ComingSoon from"./components/ComingSoon"
-import Marquee from './components/Marquee'
+import Marquee from "./components/Marquee"
+import Shop from "./components/Shop"
 
 function App(){
   return(
@@ -14,6 +15,7 @@ function App(){
         <Hero/>
         <Marquee/>
         </>}/>
+      <Route path="/collection" element={<Shop/>}/>
       <Route path="/try-on" element={<ComingSoon/>}/>
       </Routes>
     </BrowserRouter>
