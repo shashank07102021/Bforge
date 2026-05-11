@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import ComingSoon from"./components/ComingSoon"
 import Marquee from "./components/Marquee"
+import Collection from './components/collection'
 import Shop from "./components/Shop"
+import Footer from './components/Footer'
 
 function App(){
   return(
@@ -14,6 +16,8 @@ function App(){
         <>
         <Hero/>
         <Marquee/>
+        <Collection/>
+        <Footer/>
         </>}/>
       <Route path="/collection" element={<Shop/>}/>
       <Route path="/try-on" element={<ComingSoon/>}/>
